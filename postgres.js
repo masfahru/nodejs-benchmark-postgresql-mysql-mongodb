@@ -28,7 +28,7 @@ create table if not exists
 )`.simple();
 
 export const insertUser = async (user) => sql`insert into users (first_name, last_name, email, password,
-                                                                 age, gender, created_at, updated_at)
+                                              age, gender, created_at, updated_at)
                                               values (${user.first_name}, ${user.last_name}, ${user.email},
                                                       ${user.password}, ${user.age}, ${user.gender},
                                                       ${user.created_at}, ${user.updated_at})`;
